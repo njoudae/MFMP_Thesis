@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the MFMP paper and this software artifact."
+title: "MFMP: Magnitude-based Binary Mask Filtering of Contextual Token Representations for Sarcasm Detection"
+type: software
+authors:
+  - name: "njood"
+repository-code: "https://github.com/njoudae/MFMP_Thesis"
+url: "https://github.com/njoudae/MFMP_Thesis"
+abstract: >-
+  Reproducibility artifact for magnitude-based filtering of contextual token
+  representations in Arabic and English sarcasm detection experiments.

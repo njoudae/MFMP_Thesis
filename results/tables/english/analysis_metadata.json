@@ -1,0 +1,79 @@
+{
+  "dataset": {
+    "cleaned_deduplicated_rows": 4546,
+    "data_sha256": "c75769c63d704cdb21684777e2323431f62207d7d82c5618e92bc21464710d39",
+    "label_counts": {
+      "0": 3546,
+      "1": 1000
+    },
+    "raw_rows": 4553,
+    "source": "C:\\Users\\njood\\Downloads\\eng_sarcasm\\English Sarcasm.csv"
+  },
+  "result_validation": {
+    "LR": {
+      "cv_folds": 10,
+      "file": "results\\english_all_tokens_lr_c_grid_results.csv",
+      "fold_record_validation": "passed",
+      "model_name": "bert-base-uncased",
+      "rows": 61,
+      "test_rows": 910,
+      "threshold_source": [
+        "pooled_out_of_fold_train_scores"
+      ],
+      "total_attended_tokens": 80095,
+      "total_special_tokens": 9092,
+      "train_rows": 3636,
+      "unique_methods": 61
+    },
+    "RF": {
+      "cv_folds": 10,
+      "file": "results\\english_all_tokens_rf_results.csv",
+      "fold_record_validation": "passed",
+      "model_name": "bert-base-uncased",
+      "rows": 61,
+      "test_rows": 910,
+      "threshold_source": [
+        "pooled_out_of_fold_train_scores"
+      ],
+      "total_attended_tokens": 80095,
+      "total_special_tokens": 9092,
+      "train_rows": 3636,
+      "unique_methods": 61
+    },
+    "SVM": {
+      "cv_folds": 10,
+      "file": "results\\english_all_tokens_svm_c_grid_results.csv",
+      "fold_record_validation": "passed",
+      "model_name": "bert-base-uncased",
+      "rows": 61,
+      "test_rows": 910,
+      "threshold_source": [
+        "pooled_out_of_fold_train_scores"
+      ],
+      "total_attended_tokens": 80095,
+      "total_special_tokens": 9092,
+      "train_rows": 3636,
+      "unique_methods": 61
+    },
+    "cross_algorithm": {
+      "data_sha256": "c75769c63d704cdb21684777e2323431f62207d7d82c5618e92bc21464710d39",
+      "run_signatures": {
+        "LR": "af593b69e51af067c95561c01528b57ac653ede0d7ce843b2c613109d225892d",
+        "RF": "00d401d26442c31e06b424e086f282f823424f6363b2efc0e0bc192559c53f5a",
+        "SVM": "191cddcc55599117aa6c07fff13cf04b040c8f6bb656467fcdcf9e77dfbe884e"
+      },
+      "same_data_sha256": true
+    }
+  },
+  "z_distribution": {
+    "batch_size": 32,
+    "device": "cuda",
+    "max_length": 320,
+    "model_name": "bert-base-uncased",
+    "real_token_definition": "attended token whose ID is not in tokenizer.all_special_ids",
+    "special_token_definition": "token ID belongs to tokenizer.all_special_ids; padding excluded",
+    "texts": 4546,
+    "token_count_reconciliation": "passed",
+    "z_definition": "sentence-local population z-score of final-layer token L2 norms over all attended tokens"
+  }
+}

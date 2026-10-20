@@ -1,0 +1,16 @@
+{
+  "train_shape": [
+    12548,
+    8
+  ],
+  "test_shape": [
+    3000,
+    8
+  ],
+  "train_nan_text_replacements": 1,
+  "test_nan_text_replacements": 0,
+  "train_duplicate_texts": 473,
+  "test_duplicate_texts": 17,
+  "train_fingerprint": "185178de7258fd5be5a15735cc6e28eaaebf50a6d5bb049fa7e84b3e169a8775",
+  "test_fingerprint": "dc1416b8eb1d1b37f646193f193abb79486fadb2be6dcd0c4e8502ed1d842829"
+}

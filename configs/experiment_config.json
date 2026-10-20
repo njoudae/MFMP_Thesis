@@ -1,0 +1,60 @@
+{
+  "random_seed": 42,
+  "max_len": 320,
+  "batch_size": 32,
+  "cv_folds": 10,
+  "k_upper_values": [
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0
+  ],
+  "k_lower_values": [
+    0.0001,
+    0.001,
+    0.01
+  ],
+  "lr_c_values": [
+    0.001,
+    0.0001
+  ],
+  "svm_c_values": [
+    0.001,
+    0.0001
+  ],
+  "rf_param_grid": {
+    "n_estimators": [
+      400
+    ],
+    "max_depth": [
+      null,
+      30
+    ],
+    "min_samples_split": [
+      2
+    ],
+    "min_samples_leaf": [
+      2
+    ],
+    "max_features": [
+      "sqrt"
+    ],
+    "class_weight": [
+      "balanced_subsample"
+    ]
+  },
+  "train_path": "data\\processed\\train.csv",
+  "test_path": "data\\processed\\test.csv",
+  "model_path": "models\\MARBERTv2",
+  "output_dir": "experiments\\MFMP_Final_Experiment",
+  "text_column": "clean_keep",
+  "label_column": "sarcasm",
+  "mfmp_std_definition": "sentence-local population standard deviation (ddof=0)",
+  "mfmp_filter_rule": "K_lower <= abs(z_i) <= K_upper on valid non-padding tokens"
+}

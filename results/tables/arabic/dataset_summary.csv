@@ -1,0 +1,5 @@
+split,label,label_name,count,percentage,total_rows
+Train,0,Non-Sarcasm,10380,82.72234619062799,12548
+Train,1,Sarcasm,2168,17.277653809372012,12548
+Test,0,Non-Sarcasm,2179,72.63333333333334,3000
+Test,1,Sarcasm,821,27.366666666666667,3000

@@ -1,0 +1,15 @@
+{
+  "timestamp_utc": "2026-09-14T00:58:35.189438+00:00",
+  "python_version": "3.10.19 | packaged by conda-forge | (main, Jan 26 2026, 23:39:36) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "numpy_version": "2.2.6",
+  "pandas_version": "2.3.3",
+  "pytorch_version": "2.10.0+cu126",
+  "transformers_version": "5.0.0",
+  "scikit_learn_version": "1.7.2",
+  "cuda_available": true,
+  "cuda_version": "12.6",
+  "gpu_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "device": "cuda",
+  "linear_svc_dual_setting": "auto"
+}

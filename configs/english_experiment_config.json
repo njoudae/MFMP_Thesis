@@ -1,0 +1,27 @@
+{
+  "random_seed": 42,
+  "model_name": "bert-base-uncased",
+  "max_length": 320,
+  "batch_size": 32,
+  "test_size": 0.2,
+  "cv_folds": 10,
+  "cv_shuffle": true,
+  "cleaned_deduplicated_rows": 4546,
+  "train_rows": 3636,
+  "test_rows": 910,
+  "data_sha256": "c75769c63d704cdb21684777e2323431f62207d7d82c5618e92bc21464710d39",
+  "token_population": "all attended tokens including special tokens; padding excluded",
+  "z_definition": "sentence-local population z-score of final-layer token L2 norms",
+  "filter_operators": "strict lower < abs(z) < upper",
+  "fallback": "all attended tokens if filtered mask is empty",
+  "lr_c_values": [0.1, 0.01, 0.001, 1.0],
+  "svm_c_values": [0.1, 0.01, 0.001, 1.0],
+  "rf_parameters": {
+    "n_estimators": 400,
+    "max_depth": null,
+    "min_samples_split": 2,
+    "min_samples_leaf": 2,
+    "max_features": "sqrt",
+    "class_weight": "balanced_subsample"
+  }
+}

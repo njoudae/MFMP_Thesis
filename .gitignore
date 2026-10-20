@@ -1,0 +1,41 @@
+# Python and notebooks
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Environments and editors
+.venv/
+venv/
+.conda/
+.vscode/
+.idea/
+
+# Secrets and local configuration
+.env
+.env.*
+*.pem
+*.key
+credentials*
+
+# Third-party datasets (download separately)
+data/raw/**
+data/processed/**
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Downloaded models, embeddings, and checkpoints
+models/**
+*.npy
+*.npz
+*.safetensors
+*.pt
+*.pth
+checkpoints/
+cache/
+
+# Generated executions and temporary output
+*.executed.ipynb
+tmp/
+temp/
+logs/
