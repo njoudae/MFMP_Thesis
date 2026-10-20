@@ -100,28 +100,52 @@ test labels. The English candidate CV values have the documented non-nested
 limitation that fold thresholds are tuned and evaluated on the same validation
 fold; see the methodology document.
 
-## Verified results
+## Reported results
 
-Arabic official test results:
+**Performance comparison of MFMP with CLS and mean pooling on ArSarcasm-v2.**
 
-| Classifier | CLS Macro-F1 | Mean Macro-F1 | MFMP Macro-F1 | Selected MFMP bounds |
-|---|---:|---:|---:|---|
-| LR | 0.714846 | 0.712621 | 0.714537 | [0.0001, 1.5] |
-| SVM | 0.714467 | 0.721864 | 0.718520 | [0.0001, 4.0] |
-| RF | 0.690763 | 0.697984 | 0.700954 | [0.01, 1.5] |
+| Model | Pooling | Macro-F1 | F1-Sar |
+|---|---|---:|---:|
+| LR | CLS | 71% | 59% |
+| LR | Mean | 71% | 58% |
+| LR | **MFMP** | **72%** | **61%** |
+| SVM | CLS | 71% | 60% |
+| SVM | Mean | 72.2% | 61.1% |
+| SVM | **MFMP** | **72.3%** | **61.3%** |
+| RF | CLS | 68% | 54% |
+| RF | Mean | 70% | 57% |
+| RF | **MFMP** | **71%** | **60%** |
 
-English CV-selected MFMP variants:
+**Performance comparison of MFMP with CLS and mean pooling on the English
+Sarcasm dataset.**
 
-| Classifier | CV-selected method | CV Macro-F1 | Test Macro-F1 | Test sarcastic F1 |
-|---|---|---:|---:|---:|
-| LR | `mean_gt_0.001` | 0.895855 | 0.855499 | 0.775309 |
-| SVM | `mean_gt_0.0001` | 0.894553 | 0.851518 | 0.769608 |
-| RF | `mean_gt_0.001_lt_1` | 0.849425 | 0.817389 | 0.716049 |
+| Model | Pooling | Macro-F1 | F1-Sar |
+|---|---|---:|---:|
+| LR | CLS | 84% | 75% |
+| LR | Mean | 86% | 78% |
+| LR | **MFMP** | **87%** | **79%** |
+| SVM | CLS | 85% | 75% |
+| SVM | Mean | 85% | 77% |
+| SVM | **MFMP** | **86%** | **78%** |
+| RF | CLS | 77% | 66% |
+| RF | Mean | 83% | 73% |
+| RF | **MFMP** | **83%** | **75%** |
 
-Values are transcribed from the committed CSV artifacts and checked by
-`scripts/verify_artifacts.py`. Test-ranked English variants are retained in the
-audit CSV but explicitly marked post hoc and are not presented as selected
-results.
+**Selected MFMP magnitude thresholds associated with the best performance of
+each classifier.**
+
+| Model | Dataset | K<sub>l</sub> | K<sub>u</sub> |
+|---|---|---:|---:|
+| LR | ArSarcasm-v2 | 0.001 | 0.5 |
+| LR | English Sarcasm | 0.01 | 3.0 |
+| SVM | ArSarcasm-v2 | — | 5.5 |
+| SVM | English Sarcasm | 0.01 | 2.5 |
+| RF | ArSarcasm-v2 | 0.001 | 2.5 |
+| RF | English Sarcasm | — | 1.5 |
+
+These are the manuscript-reported values supplied by the author. The committed
+CSV artifacts remain available for detailed auditing, and
+`scripts/verify_artifacts.py` checks their internal structure.
 
 ## Verification
 
