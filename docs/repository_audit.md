@@ -27,10 +27,12 @@
 
 ## Open publication items
 
-- No software license was found or selected, so no `LICENSE` file was created.
+- The author selected the MIT License for the publication repository on
+  2026-10-20. Third-party datasets and pretrained models retain their own
+  licenses and are not relicensed by this repository.
 - `CITATION.cff` uses the configured Git identity `njood`; the author should
   replace it with the paper's full author list, affiliations, DOI, and ORCIDs.
 - The destination GitHub repository was verified through the connected GitHub
   API as public, empty, and using `main` as its default branch. The local GitHub
-  CLI credential is invalid, but the connected account reports push/admin
-  permission. Publication is intentionally paused until a license is selected.
+  CLI credential was invalid during the initial audit, but the connected
+  account reported push/admin permission.

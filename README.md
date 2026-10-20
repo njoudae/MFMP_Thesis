@@ -141,9 +141,8 @@ paper's complete author metadata before release. Cite ArSarcasm-v2 as requested
 by its maintainers and cite the Kaggle dataset according to its current source
 page.
 
-No software license was present in the thesis project, so this repository is
-currently **not licensed for publication or reuse** and intentionally contains
-no `LICENSE` file. The author must select a license before pushing a public
-release. This work acknowledges the ArSarcasm-v2/WANLP 2021 maintainers,
+The software in this repository is released under the MIT License; see
+[`LICENSE`](LICENSE). Dataset and pretrained-model licenses remain governed by
+their respective providers. This work acknowledges the ArSarcasm-v2/WANLP 2021 maintainers,
 the English Sarcasm dataset provider, UBC-NLP for MARBERTv2, and the BERT and
 Hugging Face ecosystems.
